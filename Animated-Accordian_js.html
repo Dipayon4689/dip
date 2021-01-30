@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Website page : Dipayon Deb </title>
+
+	<link rel="stylesheet" href="Animated-Accordian_js.css">
+	<script src="dip.js"></script>
+</head>
+<body>
+
+   <button class="accordian">
+   	Section 1
+   </button>
+   <div class="panel">
+   	<p>Bangladesh is a small country.I want to be a siklled freelancer.My name is Dipayon Deb.I am 20 years old.......</p>
+   </div>
+   <button class="accordian">
+   	Section 2
+   </button>
+   <div class="panel">
+   	<p>Bangladesh is a small country.I want to be a siklled freelancer.My name is Dipayon Deb.I am 20 years old.......</p>
+   </div>
+   <button class="accordian">
+   	Section 3
+   </button>
+   <div class="panel">
+   	<p>Bangladesh is a small country.I want to be a siklled freelancer.My name is Dipayon Deb.I am 20 years old.......</p>
+   </div>
+
+
+   <script>
+   	
+      var acc = document.getElementsByClassName("accordian"); 
+      var i;
+      for (i=0; i< acc.length; i++) {
+      	acc[i].addEventListener("click", function() {
+      		this.classList.toggle("active"); 
+      		var panel = this.nextElementSibling; 
+      		if (panel.style.maxHeight) {
+      			panel.style.maxHeight = null; 
+      		}
+      		else {
+      			panel.style.maxHeight = panel.scrollHeight + "px"; 
+      		}
+      	}); 
+      }
+
+   </script>
+</body>  
+</html>
